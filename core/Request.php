@@ -63,7 +63,7 @@ class Request {
 
 				/**
 				 * 
-				 * Return inputs as array
+				 * Return json decoded
 				 * 
 				 */
 				return json_decode($inputs);
@@ -90,7 +90,7 @@ class Request {
 
 				/**
 				 * 
-				 * Return inputs as array
+				 * Return as json decoded
 				 * 
 				 */
 				return json_decode($inputs);

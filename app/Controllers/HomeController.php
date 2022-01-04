@@ -7,14 +7,17 @@ use Core\Controller;
 class HomeController extends Controller {
 
 	public function index($request, $response) {
+
 		return $response->json(201, "Home");
+
 	}
 
 	public function users($request, $response) {
 
-		$users = $request->body();
+		$data = $request->body();
 
-		return $response->json(201, "Home", $users);
+		return $response->json(201, "Home", $data);
+
 	}
 	
 	public function names($request, $response) {
@@ -22,6 +25,7 @@ class HomeController extends Controller {
 		$data = $request->args();
 
 		return $response->json(200, "names", $data);
+
 	}
 
 }
