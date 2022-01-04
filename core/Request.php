@@ -2,7 +2,9 @@
 
 namespace Core;
 
-class Request {
+use App\Interfaces\RequestInterface;
+
+class Request implements RequestInterface {
 
 	/**
 	 *

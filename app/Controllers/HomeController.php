@@ -2,17 +2,18 @@
 
 namespace App\Controllers;
 
-use Core\Controller;
+use App\Interfaces\RequestInterface as Request;
+use App\Interfaces\ResponseInterface as Response;
 
-class HomeController extends Controller {
+class HomeController {
 
-	public function index($request, $response) {
+	public function index(Request $request, Response $response) {
 
 		return $response->json(201, "Home");
 
 	}
 
-	public function users($request, $response) {
+	public function users(Request $request, Response $response) {
 
 		$data = $request->body();
 
@@ -20,7 +21,7 @@ class HomeController extends Controller {
 
 	}
 	
-	public function names($request, $response) {
+	public function names(Request $request, Response $response) {
 
 		$data = $request->args();
 

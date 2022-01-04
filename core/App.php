@@ -4,6 +4,7 @@ namespace Core;
 
 use Core\Request;
 use Core\Response;
+use App\Interfaces\RequestInterface;
 use App\Interfaces\ResponseInterface;
 
 class App {
@@ -150,7 +151,7 @@ class App {
 	 * Make a controller call
 	 *
 	 */
-	private function call($ctrl, $request, ResponseInterface $response) {
+	private function call($ctrl, RequestInterface $request, ResponseInterface $response) {
 
 		/**
 		 *
