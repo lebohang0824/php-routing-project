@@ -215,7 +215,7 @@ class App {
 
 			/**
 			 *
-			 * Return on wrong method match
+			 * Check a request method match
 			 *
 			 */
 			if ($req_method === $http_method) {
