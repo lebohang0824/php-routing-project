@@ -28,7 +28,6 @@ class Response implements ResponseInterface {
 
 	public function view($file, $data = []) {
 
-
 		/**
 		 * 
 		 * Views file directory
