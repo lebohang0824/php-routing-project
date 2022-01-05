@@ -56,10 +56,16 @@ class Request {
 
 				/**
 				 * 
-				 * Return data as json
+				 * Get inputs
 				 * 
 				 */
 				$inputs = file_get_contents("php://input");
+
+				/**
+				 * 
+				 * Return inputs as array
+				 * 
+				 */
 				return json_decode($inputs);
 
 				break;
@@ -77,10 +83,16 @@ class Request {
 
 				/**
 				 * 
-				 * Return data as json
+				 * Get inputs
 				 * 
 				 */
 				$inputs = file_get_contents("php://input");
+
+				/**
+				 * 
+				 * Return inputs as array
+				 * 
+				 */
 				return json_decode($inputs);
 
 				break;
