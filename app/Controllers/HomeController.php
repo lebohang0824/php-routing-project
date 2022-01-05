@@ -9,7 +9,7 @@ class HomeController {
 
 	public function index(Request $request, Response $response) {
 
-		return $response->json(201, "Home");
+		return $response->view("home", ['name' => 'Lerato']);
 
 	}
 

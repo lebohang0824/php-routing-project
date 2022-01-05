@@ -25,5 +25,42 @@ class Response implements ResponseInterface {
 		]);
 
 	}
+
+	public function view($file, $data = []) {
+
+
+		/**
+		 * 
+		 * Views file directory
+		 * 
+		 */
+		$dir = __DIR__ . '/../views/';
+
+		/**
+		 * 
+		 * Combine directory and file name
+		 * 
+		 */
+		$path = $dir . $file. ".php";
+
+		/**
+		 * 
+		 * Check file exists
+		 * 
+		 */
+		if (file_exists($path)) {
+
+			/**
+			 * 
+			 * Include file
+			 * 
+			 */
+			include_once $path;
+
+		}
+
+		exit;
+
+	}
 	
 }

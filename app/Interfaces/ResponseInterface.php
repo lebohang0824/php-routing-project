@@ -11,4 +11,11 @@ interface ResponseInterface {
 	 */
 	public function json($statusCode, $message, $data = []);
 
+	/**
+	 * 
+	 * Return view
+	 * 
+	 */
+	public function view($file, $data = []);
+
 } 
