@@ -1,5 +1,8 @@
 <?php 
 
+session_start();
+
+
 /**
  *
  * Load main app class 

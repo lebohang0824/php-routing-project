@@ -2,7 +2,7 @@
 
 /**
  *
- * Load classes 
+ * Import controllers 
  * 
  */
 use App\Controllers\HomeController;
