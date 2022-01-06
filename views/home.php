@@ -1,5 +1,8 @@
-<?php 
+<?php
+	$title = "Home";
+	include_once __DIR__ . '/partials/header.php'; 
+?>
 
-var_dump($data);
+<h1>Hello world</h1>
 
-echo "Home sweet home";
+<?php include_once __DIR__ . '/partials/footer.php'; ?>

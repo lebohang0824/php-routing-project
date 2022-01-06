@@ -2,14 +2,23 @@
 
 namespace App\Controllers;
 
+use Core\Session;
 use App\Interfaces\RequestInterface as Request;
 use App\Interfaces\ResponseInterface as Response;
 
 class HomeController {
 
+	private $session;
+
+	public function __construct() {
+
+		$this->session = new Session;
+
+	}
+
 	public function index(Request $request, Response $response) {
 
-		return $response->view("home", ['name' => 'Lerato']);
+		return $response->view("home");
 
 	}
 
