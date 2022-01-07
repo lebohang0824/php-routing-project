@@ -77,5 +77,38 @@ class Session {
 
 	}
 
+	public function csrf_token() {
+
+		$token = bin2hex(random_bytes(32));
+
+		$tokens = $this->get('csrf');
+		$tokens[] = $token;
+
+		$this->set('csrf', $tokens);
+
+		return $token;
+
+	}
+
+	public function csrf_check($csrf) {
+
+		$token = $csrf;
+		$tokens = $this->get('csrf');
+
+		if (empty($token)) {
+			$this->remove('csrf');
+			return false;
+        }
+
+        if (!in_array($token, $tokens)) {
+			$this->remove('csrf');
+			return false;
+        }
+
+		$this->remove('csrf');
+		return true;
+
+	}
+
 
 }

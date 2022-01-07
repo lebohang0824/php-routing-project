@@ -2,6 +2,7 @@
 
 namespace Core;
 
+use Core\Session;
 use App\Interfaces\RequestInterface;
 
 class Request implements RequestInterface {
@@ -15,11 +16,19 @@ class Request implements RequestInterface {
 
 	/**
 	 *
+	 * Parsed session properties
+	 * 
+	 */
+	private $session;
+
+	/**
+	 *
 	 * Set arguments 
 	 * 
 	 */
 	public function __construct($args = []) {
 		
+		$this->session = new Session;
 		$this->args = $args;
 		
 	}
@@ -103,6 +112,23 @@ class Request implements RequestInterface {
 				return [];
 				break;
 		}
+
+	}
+
+
+	public function csrf_token() {
+
+		return $this->session->csrf_token();
+
+	}
+
+	public function csrf_check() {
+
+		$body = $this->body();
+
+		$token = $body['csrf_token'];
+
+		return $this->session->csrf_check($token);
 
 	}
 

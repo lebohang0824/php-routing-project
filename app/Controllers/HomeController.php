@@ -32,6 +32,7 @@ class HomeController {
 	
 	public function names(Request $request, Response $response) {
 
+
 		$data = $request->args();
 
 		return $response->json(200, "names", $data);
